@@ -1,0 +1,282 @@
+:root {
+    --azul-oscuro: #1a1c2c;
+    --gris-claro: #f2f2f2;
+    --rojo-apagado: #b03030;
+    --dorado-suave: #e8c547;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--azul-oscuro);
+  }
+  
+  header {
+    background-color: var(--azul-oscuro);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    color: var(--dorado-suave);
+  }
+  
+  .hero {
+    background-color: var(--rojo-apagado);
+    color: white;
+    padding: 100px 20px 80px;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f8f8f8;
+  }
+  
+  .hero .btn {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: var(--dorado-suave);
+    color: var(--azul-oscuro);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #d8b53a;
+    transform: scale(1.05);
+  }
+  
+  .img-hero {
+    position: absolute;
+    top: -20px; /* Subimos la imagen para ocultar el borde */
+    height: 120%;
+    width: auto;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.2s ease-out;
+  
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%);
+  }
+  
+  
+  .img-izquierda {
+    left: -100px;
+    transform: rotate(-4deg);
+  }
+  
+  .img-derecha {
+    right: -100px;
+    transform: rotate(4deg);
+  }
+  
+  
+  
+  .productos {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  
+  
+  .producto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .producto img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .producto h4 {
+    margin: 10px 0 5px;
+  }
+  
+  .producto button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: var(--dorado-suave);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+  }
+  
+  .subseccion {
+    margin-top: 40px;
+  }
+  
+  .subseccion h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+  }
+  
+  footer {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Animación fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .productos h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+  }
+  
+  .titulo-seccion {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .titulo-seccion::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--dorado-suave);
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav {
+      margin-top: 10px;
+    }
+  
+    .hero {
+      padding: 40px 20px;
+    }
+  
+    .hero .btn {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  
+    .grid-productos {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .producto {
+      max-width: 90%;
+    }
+  
+    .img-hero {
+      display: none; /* ocultamos las imágenes diagonales en móvil */
+    }
+  
+    .titulo-seccion {
+      font-size: 1.8em;
+    }
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-image: url("pokebola.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
