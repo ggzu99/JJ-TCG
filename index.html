@@ -22,7 +22,14 @@
     <img src="derecha.jpg" alt="Decoración derecha" class="img-hero img-derecha">
 
     <h1>Bienvenido a JJ TCG</h1>
-    <p>Venta de Sobres, Booster Bundles y Tins con entregas en Santiago.</p>
+    <p id="hero-mensaje" class="mensaje-rotador fade-in">
+      Venta de Sobres, Booster Bundles y Tins con entregas en Santiago.
+    </p>
+    <div class="rotador-puntos">
+      <span class="punto activo" onclick="cambiarMensajeManual(0)"></span>
+      <span class="punto" onclick="cambiarMensajeManual(1)"></span>
+      <span class="punto" onclick="cambiarMensajeManual(2)"></span>
+    </div>
     <a href="#catalogo" class="btn">Explora nuestro catálogo</a>
   </section>
 
