@@ -130,6 +130,7 @@ nav a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 260px;
   margin: 0 auto;
+  position: relative;
 }
 
 .producto:hover {
@@ -326,4 +327,28 @@ html {
 
 .punto.activo {
   opacity: 1;
+}
+
+.agotado {
+  position: absolute;
+  top: 25px; /* Ajusta la distancia desde el borde superior, prueba con un valor menor si es necesario */
+  left: 1px; /* Ajusta la distancia desde el borde izquierdo */
+  background-color: rgb(223, 78, 78); /* Color de fondo rojo */
+  color: white; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado interno */
+  font-weight: bold; /* Negrita */
+  transform: rotate(-45deg); /* Rotación diagonal */
+  z-index: 10; /* Asegura que esté encima del producto */
+}
+
+.pocas.unidades {
+  position: absolute;
+  top: 55px; /* Ajusta la distancia desde el borde superior, prueba con un valor menor si es necesario */
+  left: -2px; /* Ajusta la distancia desde el borde izquierdo */
+  background-color: rgb(223, 78, 78); /* Color de fondo rojo */
+  color: white; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado interno */
+  font-weight: bold; /* Negrita */
+  transform: rotate(-45deg); /* Rotación diagonal */
+  z-index: 10; /* Asegura que esté encima del producto */
 }
