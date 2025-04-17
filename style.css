@@ -341,10 +341,10 @@ html {
   z-index: 10; /* Asegura que esté encima del producto */
 }
 
-.pocas.unidades {
+.pocas {
   position: absolute;
-  top: 55px; /* Ajusta la distancia desde el borde superior, prueba con un valor menor si es necesario */
-  left: -2px; /* Ajusta la distancia desde el borde izquierdo */
+  top: 45px; /* Ajusta la distancia desde el borde superior, prueba con un valor menor si es necesario */
+  left: -5px; /* Ajusta la distancia desde el borde izquierdo */
   background-color: rgb(223, 78, 78); /* Color de fondo rojo */
   color: white; /* Texto blanco */
   padding: 5px 10px; /* Espaciado interno */
